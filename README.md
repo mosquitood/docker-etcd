@@ -1,4 +1,4 @@
-##Etcd container
+## Etcd container
 The `-data-dir` is a volume mounted to `/var/etcd/data`, and the default ports are bound to Etcd and exposed.
 
 Recently added a run script so that http is not hard-coded into the Dockerfile (for running over SSL).  Just overwrite `$CLIENT_URLS` and `$PEER_URLS` at runtime (these are the **listening** URLs).  You'll still need to set the `-advertise-client-urls` and `-initial-advertise-peer-urls` flags if the container will be part of a cluster.
